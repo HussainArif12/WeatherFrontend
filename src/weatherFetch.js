@@ -16,7 +16,7 @@ function WeatherFetch (){
         fetch('http://api.openweathermap.org/data/2.5/weather?q=Karachi,pk&APPID=2e236a04f5583031b3357934d5678f1c&units=metric')
         .then(res=> res.json())
         .then(data=> {
-            let main = data.weather[0].main;
+            let main = data.weather[0].description;
             setQuery(main);
             console.log(main);
             setMain(data.weather[0].main);
