@@ -1,3 +1,76 @@
+@media only screen and (min-width : 1120px) {
+  * {
+    padding-bottom : 0%;
+  }
+  .main { top : 1%;}
+  main {bottom : 1%;}
+}
+html {
+  height : 100%;
+  width : 100%;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display : flex;
+  flex-direction : column;
+  align-items : center;
+  padding: 5% 15% 15%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  
+}
+main {
+  display : flex;
+  flex-direction : column;
+  align-items:flex-start;
+  padding-top : 3%;
+  bottom : 5%;
+}
+.main {
+  transition: 0.2s ease-out;
+  font-size : 250%;
+  width : 100%;
+}
+.time {
+  font-family : Arial, Helvetica, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  font-size :300%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-weight : bold;
+  
+}
+.bgImage{
+  width : 100%;
+  height : 100%;
+}
+.day {
+  font-size : 50%;
+}
+.tempSpan, .feelsLikeSpan {
+  display: inline;
+  font-size : 200%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-weight : bold;
+  
+}
+.tempHolder, .feelsLikeHolder {
+  color : white;
+   -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-weight  : 1000;
+  
+}
+#root{ 
+display: flex;
+  flex-direction: column;
+  background-repeat : inherit ;
+}
 .App {
   text-align: center;
 }
