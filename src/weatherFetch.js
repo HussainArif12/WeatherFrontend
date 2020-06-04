@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from "react"
- 
+import dotenv from "dotenv"
 import ImgFetch from "./imgFetch"
 function WeatherFetch (){
     const [main,setMain] = useState('');
@@ -8,15 +8,19 @@ function WeatherFetch (){
     const [feelsLike,setFeelsLike] = useState('')
     const [icon,setIcon] = useState('');
     const [day,setDay]  = useState('');
-    const days= ["Sun","Mon","Tues","Wed","Thurs","Fri","Say"]
+    const days= ["Sun","Mon","Tues","Wed","Thurs","Fri","Sat"]
     const [description,setDescription] = useState('000');
     const [query,setQuery] = useState('');
     const [loading, setLoading] = useState(true);
+    dotenv.config();
+    const key = process.env.REACT_APP_APIWEATHER;
+    console.log('${process.env.REACT_APP_MYMESSAGE}')
     useEffect(()=>{
-        fetch('http://api.openweathermap.org/data/2.5/weather?q=Karachi,pk&APPID=2e236a04f5583031b3357934d5678f1c&units=metric')
+        fetch('http://api.openweathermap.org/data/2.5/weather?q=Karachi,pk&APPID=' +key+ '&units=metric')
         .then(res=> res.json())
         .then(data=> {
             let main = data.weather[0].description;
+            console.log('$key is : (key)');
             setQuery(main);
             console.log(main);
             setMain(data.weather[0].main);

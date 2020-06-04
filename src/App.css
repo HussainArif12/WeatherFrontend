@@ -1,6 +1,6 @@
-@media only screen and (min-width: 1120px) {
+@media only screen and (max-width :742px) {
   body{
-    background-color: lightblue;
+    background-color: lightcoral;
   }
 }
 html {
@@ -14,6 +14,7 @@ html {
 
 header {
   display : flex;
+  font-family: 'Merriweather',sans-serif;
   flex-direction : column;
   align-items : center;
   padding: 5% 15% 15%;

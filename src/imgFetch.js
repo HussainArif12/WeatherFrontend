@@ -5,7 +5,6 @@ function ImgFetch (props) {
     const [width, setWidth] = useState(window.innerWidth)
     const [height,setHeight] = useState(window.innerHeight)
     const [rawSource,setRawSource] = useState('')
-    const [query,setQuery] = useState(props.query);
     const [isLoading, setIsLoading] = useState(true);
    // let imgSrc2 = 'https://images.unsplash.com/photo-1530908295418-a12e326966ba?&w=' + width + '&h=' + height + '&fit=crop'
     let orientation = '';
