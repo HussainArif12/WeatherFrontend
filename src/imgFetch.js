@@ -1,18 +1,20 @@
 import React,{useState} from "react"
 import  {useEffect} from "react"
+import dotenv from "dotenv"
 function ImgFetch (props) {
     const [imgSrc, SetImgSrc] = useState('');
     const [width, setWidth] = useState(window.innerWidth)
     const [height,setHeight] = useState(window.innerHeight)
     const [rawSource,setRawSource] = useState('')
     const [isLoading, setIsLoading] = useState(true);
+    dotenv.config();
+    const key = process.env.REACT_APP_APIIMAGE;
    // let imgSrc2 = 'https://images.unsplash.com/photo-1530908295418-a12e326966ba?&w=' + width + '&h=' + height + '&fit=crop'
     let orientation = '';
     if(height > width) orientation ='portrait';
     else orientation = 'landscape';
     useEffect(()=>{ 
-       // fetch('https://api.unsplash.com/photos/random/?client_id=4N9l2Ve0azWHqAX5FdlvGISEW9gHXOmxnIspZVo2BbQ&orientation=' + orientation)
-       fetch('https://api.unsplash.com/photos/random/?client_id=4N9l2Ve0azWHqAX5FdlvGISEW9gHXOmxnIspZVo2BbQ&query=' + props.query + '&orientation=' + orientation)
+        fetch('https://api.unsplash.com/photos/random/?client_id=' + key  + '&query=' + props.query + '&orientation=' + orientation)
        
       .then(res=> res.json())
         .then(data=>  {
