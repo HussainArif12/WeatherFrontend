@@ -13,7 +13,7 @@ function WeatherFetch (){
     const [query,setQuery] = useState('');
     const [loading, setLoading] = useState(true);
     dotenv.config();
-    const key = process.env.REACT_APP_APIWEATHER;
+    const key = ENV['APIWEATHER'];
     console.log('${process.env.REACT_APP_MYMESSAGE}')
     useEffect(()=>{
         fetch('http://api.openweathermap.org/data/2.5/weather?q=Karachi,pk&APPID=' +key+ '&units=metric')
