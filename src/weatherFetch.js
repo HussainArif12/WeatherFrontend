@@ -40,7 +40,7 @@ function WeatherFetch (){
     },[])
     
     function getTime() {
-        fetch('http://worldtimeapi.org/api/timezone/Asia/Karachi')
+        fetch('https://worldtimeapi.org/api/timezone/Asia/Karachi')
         .then(res=> res.json())
         .then(data=>{
             setTime(data.datetime.substring(11,19));
