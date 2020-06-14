@@ -15,7 +15,7 @@ function WeatherFetch (){
     dotenv.config();
     const key = process.env.REACT_APP_APIWEATHER ;
     useEffect(()=>{
-        fetch('http://api.openweathermap.org/data/2.5/weather?q=Karachi,pk&APPID=' +key+ '&units=metric')
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=Karachi,pk&APPID=' +key+ '&units=metric')
         .then(res=> res.json())
         .then(data=> {
             let main = data.weather[0].description;
