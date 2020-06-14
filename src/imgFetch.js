@@ -8,7 +8,7 @@ function ImgFetch (props) {
     const [rawSource,setRawSource] = useState('')
     const [isLoading, setIsLoading] = useState(true);
     dotenv.config();
-    const key = process.env.APIIMAGE;
+    const key = process.env.REACT_APP_APIIMAGE;
    // let imgSrc2 = 'https://images.unsplash.com/photo-1530908295418-a12e326966ba?&w=' + width + '&h=' + height + '&fit=crop'
     let orientation = '';
     if(height > width) orientation ='portrait';
