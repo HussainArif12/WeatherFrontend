@@ -19,7 +19,6 @@ function WeatherFetch (){
         .then(res=> res.json())
         .then(data=> {
             let main = data.weather[0].description;
-            console.log('$key is : (key)');
             setQuery(main);
             console.log(main);
             setMain(data.weather[0].main);
