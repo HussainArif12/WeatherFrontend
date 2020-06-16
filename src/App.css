@@ -60,6 +60,7 @@ display: flex;
   background-repeat : no-repeat ;
 }
 footer {
+  left : 50%;
   color : white;
   position : absolute;
 }

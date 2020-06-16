@@ -54,7 +54,7 @@ function WeatherFetch (){
     <header>
     <h1 className='main'>{main}, </h1>
     <h1 className='description'>{description}</h1>
-    <img src={" http://openweathermap.org/img/wn/" + icon + "@2x.png"}/>
+    <img alt='weather icon' src={" http://openweathermap.org/img/wn/" + icon + "@2x.png"}/>
     </header>
        <main>
     <h1 className='time'>{time} <span className="day"> {day}</span></h1>
