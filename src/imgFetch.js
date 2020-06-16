@@ -7,6 +7,10 @@ function ImgFetch (props) {
     const [height,setHeight] = useState(window.innerHeight)
     const [rawSource,setRawSource] = useState('')
     const [isLoading, setIsLoading] = useState(true);
+    const [html,setHTML] = useState('');
+    const [authorLink,setAuthorLink] = useState('');
+    const [authorName,setAuthorName] = useState('');
+    const [imgDescription,setImgDescription] = useState('');
     dotenv.config();
     const key = process.env.REACT_APP_APIIMAGE;
    // let imgSrc2 = 'https://images.unsplash.com/photo-1530908295418-a12e326966ba?&w=' + width + '&h=' + height + '&fit=crop'
@@ -19,8 +23,14 @@ function ImgFetch (props) {
       .then(res=> res.json())
         .then(data=>  {
          setRawSource(data.urls.raw );
+         console.log(data);
       data.urls.raw+= "fit=fill&fill=blur" +  "&w=" +width+ "&h="+(height)
         setIsLoading(false)
+        setHTML(data.links.html);
+        setAuthorLink(data.user.links.html);
+        setAuthorName(data.user.username);
+        setImgDescription(data.description);
+
 SetImgSrc(data.urls.raw);
 console.log(imgSrc);
     })
@@ -53,6 +63,8 @@ setImageBackground(imgSrc);
   { //setImageBackground(imgSrc2) 
   }
   {isLoading? <p>Wait</p> : setImageBackground(imgSrc)}
+  <footer>Image Source : <a href={html}> {imgDescription}  </a> 
+  by <a href={authorLink}> {authorName}</a> </footer>
         </>
     )
 
