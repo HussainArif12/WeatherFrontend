@@ -62,6 +62,8 @@ display: flex;
 }
 footer {
   left : 40%;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
   color : white;
   position : absolute;
   font-size : 75%;
