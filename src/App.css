@@ -52,6 +52,7 @@ main {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
   font-weight  : 1000;
+  padding-bottom : 1%;
   
 }
 #root{ 
@@ -60,9 +61,10 @@ display: flex;
   background-repeat : no-repeat ;
 }
 footer {
-  left : 50%;
+  left : 40%;
   color : white;
   position : absolute;
+  font-size : 75%;
 }
 a {
   color : rgb(245, 240, 228);
