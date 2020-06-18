@@ -62,14 +62,14 @@ display: flex;
 }
 footer {
   left : 40%;
-  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-width: 0.25px;
   -webkit-text-stroke-color: black;
+  font-size: medium;
   color : white;
   position : absolute;
-  font-size : 75%;
 }
 a {
-  color : rgb(245, 240, 228);
+  color : white;
 }
 .App {
   text-align: center;

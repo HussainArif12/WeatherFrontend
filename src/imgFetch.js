@@ -27,16 +27,15 @@ function ImgFetch (props) {
       data.urls.raw+= "fit=fill&fill=blur" +  "&w=" +width+ "&h="+(height)
         setIsLoading(false)
         setHTML(data.links.html);
-        setAuthorLink(data.user.links.html);
-        setAuthorName(data.user.username);
+        setAuthorLink(data.user.links.html+ "?utm_source=HussainsWeatherApp&utm_medium=referral");
+        setAuthorName(data.user.name);
         setImgDescription(data.description);
+        console.log('image here ' + imgDescription);
 
 SetImgSrc(data.urls.raw);
+})
 console.log(imgSrc);
-    })
    
-   // imgSrc2 = imgSrc2Temp + "&w=" + width + "&h=" + height +" &fit=clip";
-    
   },[])
     
     useEffect(()=> {
@@ -45,7 +44,7 @@ SetImgSrc(rawSource + "fit=fill&fill=blur" +  "&w=" + width+ "&h="+height);
 setImageBackground(imgSrc);
 },[height,width]);
     
-    function update () {
+  function update () {
        setWidth(window.innerWidth)
        setHeight(window.innerHeight)
       };
@@ -57,14 +56,10 @@ setImageBackground(imgSrc);
     window.addEventListener("resize", update);
     return (
     <>
-   { //setImageBackground('https://picsum.photos/' + width + '/' + height) 
-}
-  
-  { //setImageBackground(imgSrc2) 
-  }
-  {isLoading? <p>Wait</p> : setImageBackground(imgSrc)}
-  <footer>Image Source : <a href={html}> {imgDescription}  </a> 
-  by <a href={authorLink}> {authorName}</a> </footer>
+    {isLoading? <p> Wait</p> : 
+      setImageBackground(imgSrc)
+      }
+  {isLoading? <p>Giving Data:</p> : <footer>Image by <a href={authorLink}> {authorName}</a> on <a href="https://www.unsplash.com?utm_source=HussainsWeatherApp&utm_medium=referral">Unsplash</a> </footer> }
         </>
     )
 
