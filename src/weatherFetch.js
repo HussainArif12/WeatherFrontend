@@ -59,7 +59,7 @@ function WeatherFetch (){
        <main>
     <h1 className='time'>{time} <span className="day"> {day}</span></h1>
   <p className="tempHolder">Real temp:  <span className="tempSpan"> {temp}  °C </span> </p>
-  <p className="feelsLikeHolder">Fees like:  <span className="feelsLikeSpan"> {parseInt(feelsLike)}  ° C </span> </p>
+  <p className="feelsLikeHolder">Feels like:  <span className="feelsLikeSpan"> {parseInt(feelsLike)}  ° C </span> </p>
     </main> 
     </>
 }
