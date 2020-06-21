@@ -59,7 +59,8 @@ setImageBackground(imgSrc);
     {isLoading? <p> Wait</p> : 
       setImageBackground(imgSrc)
       }
-  {isLoading? <p>Giving Data:</p> : <footer>Image by <a href={authorLink}> {authorName}</a> on <a href="https://www.unsplash.com?utm_source=HussainsWeatherApp&utm_medium=referral">Unsplash</a> </footer> }
+  {isLoading? <p>Giving Data:</p> :
+  <footer id='credits'>Image by <a href={authorLink}> {authorName}</a> on <a href="https://www.unsplash.com?utm_source=HussainsWeatherApp&utm_medium=referral">Unsplash</a> </footer> }
         </>
     )
 
